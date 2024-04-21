@@ -52,7 +52,7 @@ namespace VolAreaCalculator
             if(double.TryParse(RectAreaTxt1.Text, out double Rectlength) && double.TryParse(RectAreaTxt2.Text, out double Rectwidth))
             {
                 double RectArea = Rectlength * Rectwidth;
-
+                RectAreaAnswer.Text = RectArea.ToString();
                 
             }
         }
@@ -62,7 +62,7 @@ namespace VolAreaCalculator
             if(double.TryParse(TriAreaTxt1.Text, out double Trilength) && double.TryParse(TriAreaTxt2.Text, out double Triwidth))
             {
                 double TriArea = (Trilength * Triwidth) / 2;
-
+                TriAreaAnswer.Text = TriArea.ToString();
             }
         }
 
@@ -71,7 +71,7 @@ namespace VolAreaCalculator
             if(double.TryParse(CircleAreaTxt1.Text, out double CircleRadius))
             {
                 double CircleArea = Math.PI* (CircleRadius * CircleRadius);
-
+                CircleAreaAnswer.Text = CircleArea.ToString();
             }
         }
 
@@ -81,7 +81,7 @@ namespace VolAreaCalculator
                 && double.TryParse(CuboidVolTxt3.Text, out double Cuboiddepth))
             {
                 double CuboidVolume = Cuboidheight * Cuboiddepth * Cuboidlength;
-
+                CuboidVolAnswer.Text = CuboidVolume.ToString();
             }
         }
 
@@ -91,7 +91,7 @@ namespace VolAreaCalculator
                 && double.TryParse(PyramidVolTxt3.Text, out double Pyramiddepth))
             {
                 double PyramidVolume = (Pyramidheight * Pyramiddepth * Pyramidlength) / 3;
-
+                PyramidVolAnswer.Text = PyramidVolume.ToString();
             }
         }
 
@@ -100,7 +100,7 @@ namespace VolAreaCalculator
             if(double.TryParse(SphereVolTxt1.Text, out double Sphereradius))
             {
                 double SphereVolume = (4.0 / 3.0) * Math.PI * Math.Pow(Sphereradius, 3);
-
+                SphereVolAnswer.Text = SphereVolume.ToString();
             }
         }
     }
