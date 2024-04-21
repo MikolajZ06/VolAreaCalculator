@@ -53,7 +53,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.SphereVolTxt1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,6 +76,14 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.PyramidVolTxt3 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.CircleAreaAnswer = new System.Windows.Forms.Label();
+            this.CuboidVolAnswer = new System.Windows.Forms.Label();
+            this.PyramidVolAnswer = new System.Windows.Forms.Label();
+            this.SphereVolAnswer = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RectAreaTxt1
@@ -104,6 +111,7 @@
             this.RectAreaButton.TabIndex = 2;
             this.RectAreaButton.Text = "Calculate";
             this.RectAreaButton.UseVisualStyleBackColor = true;
+            this.RectAreaButton.Click += new System.EventHandler(this.RectAreaButton_Click);
             // 
             // label1
             // 
@@ -139,6 +147,7 @@
             this.TriAreaButton.TabIndex = 6;
             this.TriAreaButton.Text = "Calculate";
             this.TriAreaButton.UseVisualStyleBackColor = true;
+            this.TriAreaButton.Click += new System.EventHandler(this.TriAreaButton_Click);
             // 
             // TriAreaTxt2
             // 
@@ -258,6 +267,7 @@
             this.CircleAreaButton.TabIndex = 21;
             this.CircleAreaButton.Text = "Calculate";
             this.CircleAreaButton.UseVisualStyleBackColor = true;
+            this.CircleAreaButton.Click += new System.EventHandler(this.CircleAreaButton_Click);
             // 
             // SphereVolButton
             // 
@@ -267,6 +277,7 @@
             this.SphereVolButton.TabIndex = 42;
             this.SphereVolButton.Text = "Calculate";
             this.SphereVolButton.UseVisualStyleBackColor = true;
+            this.SphereVolButton.Click += new System.EventHandler(this.SphereVolButton_Click);
             // 
             // label11
             // 
@@ -275,12 +286,12 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 41;
-            this.label11.Text = "2";
+            this.label11.Text = "3";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(44, 382);
+            this.label12.Location = new System.Drawing.Point(76, 382);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(17, 13);
             this.label12.TabIndex = 40;
@@ -292,15 +303,6 @@
             this.SphereVolTxt1.Name = "SphereVolTxt1";
             this.SphereVolTxt1.Size = new System.Drawing.Size(100, 20);
             this.SphereVolTxt1.TabIndex = 39;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(108, 382);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 13);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "x";
             // 
             // label14
             // 
@@ -388,6 +390,7 @@
             this.PyramidVolButton.TabIndex = 28;
             this.PyramidVolButton.Text = "Calculate";
             this.PyramidVolButton.UseVisualStyleBackColor = true;
+            this.PyramidVolButton.Click += new System.EventHandler(this.PyramidVolButton_Click);
             // 
             // label21
             // 
@@ -421,6 +424,7 @@
             this.CuboidVolButton.TabIndex = 24;
             this.CuboidVolButton.Text = "Calculate";
             this.CuboidVolButton.UseVisualStyleBackColor = true;
+            this.CuboidVolButton.Click += new System.EventHandler(this.CuboidVolButton_Click);
             // 
             // label23
             // 
@@ -498,11 +502,87 @@
             this.PyramidVolTxt3.Size = new System.Drawing.Size(100, 20);
             this.PyramidVolTxt3.TabIndex = 49;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(238, 62);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(13, 13);
+            this.label29.TabIndex = 50;
+            this.label29.Text = "=";
+            // 
+            // CircleAreaAnswer
+            // 
+            this.CircleAreaAnswer.AutoSize = true;
+            this.CircleAreaAnswer.Location = new System.Drawing.Point(291, 177);
+            this.CircleAreaAnswer.Name = "CircleAreaAnswer";
+            this.CircleAreaAnswer.Size = new System.Drawing.Size(0, 13);
+            this.CircleAreaAnswer.TabIndex = 51;
+            // 
+            // CuboidVolAnswer
+            // 
+            this.CuboidVolAnswer.AutoSize = true;
+            this.CuboidVolAnswer.Location = new System.Drawing.Point(407, 267);
+            this.CuboidVolAnswer.Name = "CuboidVolAnswer";
+            this.CuboidVolAnswer.Size = new System.Drawing.Size(0, 13);
+            this.CuboidVolAnswer.TabIndex = 52;
+            // 
+            // PyramidVolAnswer
+            // 
+            this.PyramidVolAnswer.AutoSize = true;
+            this.PyramidVolAnswer.Location = new System.Drawing.Point(407, 324);
+            this.PyramidVolAnswer.Name = "PyramidVolAnswer";
+            this.PyramidVolAnswer.Size = new System.Drawing.Size(0, 13);
+            this.PyramidVolAnswer.TabIndex = 53;
+            // 
+            // SphereVolAnswer
+            // 
+            this.SphereVolAnswer.AutoSize = true;
+            this.SphereVolAnswer.Location = new System.Drawing.Point(294, 382);
+            this.SphereVolAnswer.Name = "SphereVolAnswer";
+            this.SphereVolAnswer.Size = new System.Drawing.Size(0, 13);
+            this.SphereVolAnswer.TabIndex = 54;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(7, 382);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(24, 13);
+            this.label30.TabIndex = 55;
+            this.label30.Text = "4/3";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(49, 382);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(12, 13);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "x";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(108, 382);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(12, 13);
+            this.label31.TabIndex = 57;
+            this.label31.Text = "x";
+            // 
             // AreaVolumeCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 630);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.SphereVolAnswer);
+            this.Controls.Add(this.PyramidVolAnswer);
+            this.Controls.Add(this.CuboidVolAnswer);
+            this.Controls.Add(this.CircleAreaAnswer);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.PyramidVolTxt3);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
@@ -514,7 +594,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.SphereVolTxt1);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
@@ -587,7 +666,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox SphereVolTxt1;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -611,6 +689,14 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox PyramidVolTxt3;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label CircleAreaAnswer;
+        private System.Windows.Forms.Label CuboidVolAnswer;
+        private System.Windows.Forms.Label PyramidVolAnswer;
+        private System.Windows.Forms.Label SphereVolAnswer;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label31;
     }
 }
 
